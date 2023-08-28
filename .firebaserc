@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lab1-cd5db": {
+      "hosting": {
+        "lab-firebase": [
+          "lab1-cd5db"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lab1-cd5db"
+  }
+}
