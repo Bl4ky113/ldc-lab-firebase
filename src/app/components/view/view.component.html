@@ -1,1 +1,20 @@
-<p>view works!</p>
+<mat-toolbar color="primary">
+  <mat-icon>local_fire_department</mat-icon>
+  <span>Kanban Fire</span>
+</mat-toolbar>
+
+<div class="content-wrapper">
+  <button (click)="newPerson()" mat-button>
+    <mat-icon>add</mat-icon> Add Person
+  </button>
+
+  <div class="container-wrapper">
+    <div class="container">
+      <app-person-view
+        *ngFor="let person of people"
+        [person]="person"
+        (edit)="editPerson($event)">
+      </app-person-view>
+    </div>
+</div>
+

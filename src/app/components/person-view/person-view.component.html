@@ -1,0 +1,9 @@
+<mat-card
+  class="item"
+  *ngIf="person"
+  (dblclick)="edit.emit(person)">
+  <h2>{{ person.name }}</h2>
+  <p>
+    {{ person.docNumber }} - {{ person.age }}
+  </p>
+</mat-card>

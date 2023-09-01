@@ -1,0 +1,54 @@
+<mat-form-field>
+  <mat-label>
+    Name
+  </mat-label>
+  <input
+    matInput
+    cdkFocusInitial
+    [(ngModel)]="data.person.name"/>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>
+    Age
+  </mat-label>
+  <input
+    matInput
+    [(ngModel)]="data.person.age"
+    type="number"/>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>
+    Document Number
+  </mat-label>
+  <input
+    matInput
+    cdkFocusInitial
+    [(ngModel)]="data.person.docNumber"/>
+</mat-form-field>
+
+<div
+  mat-dialog-actions>
+  <button
+    *ngIf="data.enableDelete"
+    mat-fab
+    color="primary"
+    aria-label="Delete"
+    [mat-dialog-close]="{ person: data.person, delete: true }">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
+
+<div mat-dialog-actions>
+  <button
+    mat-button
+    [mat-dialog-close]="{ person: data.person }">
+    OK
+  </button>
+  <button
+    mat-button
+    (click)="cancel()">
+    Cancel
+  </button>
+</div>
